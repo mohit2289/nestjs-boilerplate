@@ -1,0 +1,30 @@
+{
+    "root": true,
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": { "project": ["./tsconfig.json"] },
+    "plugins": [
+        "@typescript-eslint",
+		"eslint-plugin-jsdoc"
+
+    ],
+    "rules": {
+		"@typescript-eslint/no-unused-vars": "off",
+		"@typescript-eslint/no-empty-function" : "off",
+		"no-useless-escape": "off",
+		"@typescript-eslint/no-explicit-any": ["off"],
+		"@typescript-eslint/ban-types": "off",
+	 	"no-mixed-spaces-and-tabs": "off",
+		"jsdoc/require-jsdoc": ["error",{"require":{"FunctionDeclaration":true,"FunctionExpression":true,"ArrowFunctionExpression":true}}],
+		"jsdoc/require-param": 2, // Recommended
+		"jsdoc/require-param-description": 2, // Recommended
+		"jsdoc/require-param-name": 2, // Recommended
+		"jsdoc/require-param-type": 2, // Recommended
+		"jsdoc/require-description": ["error", {"descriptionStyle":"tag"}],
+		"no-prototype-builtins": "off"
+    },
+    "ignorePatterns": ["src/**/*.test.ts", "src/frontend/generated/*"]
+}
